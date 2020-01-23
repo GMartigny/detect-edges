@@ -1,0 +1,38 @@
+{
+    "name": "detect-edges",
+    "version": "0.1.0",
+    "description": "Smartly detect edges of an image",
+    "main": "index.mjs",
+    "scripts": {
+        "test": "ava"
+    },
+    "eslintConfig": {
+        "extends": "@gmartigny/eslint-config"
+    },
+    "ava": {
+        "require": [
+            "esm"
+        ]
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/GMartigny/detect-edges.git"
+    },
+    "keywords": [
+        "image"
+    ],
+    "author": "GMartigny",
+    "license": "MIT",
+    "bugs": {
+        "url": "https://github.com/GMartigny/detect-edges/issues"
+    },
+    "homepage": "https://github.com/GMartigny/detect-edges#readme",
+    "funding": "https://github.com/GMartigny/detect-edges?sponsor=1",
+    "devDependencies": {
+        "@gmartigny/eslint-config": "^1.4.2",
+        "ava": "^3.0.0",
+        "canvas": "^2.6.1",
+        "eslint": "^6.8.0",
+        "esm": "^3.2.25"
+    }
+}
