@@ -2,6 +2,13 @@
     "name": "detect-edges",
     "version": "1.0.1",
     "description": "Smartly detect edges of an image",
+    "keywords": [
+        "canvas",
+        "transparency",
+        "opacity",
+        "pixels",
+        "crop"
+    ],
     "main": "index.mjs",
     "scripts": {
         "test": "ava"
@@ -18,9 +25,6 @@
         "type": "git",
         "url": "git+https://github.com/GMartigny/detect-edges.git"
     },
-    "keywords": [
-        "image"
-    ],
     "author": "GMartigny",
     "license": "MIT",
     "bugs": {
