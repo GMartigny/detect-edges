@@ -9,17 +9,13 @@
         "pixels",
         "crop"
     ],
-    "main": "index.mjs",
+    "main": "index.js",
+    "type": "module",
     "scripts": {
         "test": "ava"
     },
     "eslintConfig": {
         "extends": "@gmartigny/eslint-config"
-    },
-    "ava": {
-        "require": [
-            "esm"
-        ]
     },
     "repository": {
         "type": "git",
@@ -33,10 +29,9 @@
     "homepage": "https://github.com/GMartigny/detect-edges#readme",
     "funding": "https://github.com/GMartigny/detect-edges?sponsor=1",
     "devDependencies": {
-        "@gmartigny/eslint-config": "^1.4.2",
-        "ava": "^3.0.0",
-        "canvas": "^2.6.1",
-        "eslint": "^6.8.0",
-        "esm": "^3.2.25"
+        "@gmartigny/eslint-config": "^1.7.0",
+        "ava": "^3.15.0",
+        "canvas": "^2.7.0",
+        "eslint": "^7.25.0"
     }
 }

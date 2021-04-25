@@ -38,7 +38,7 @@ const { left, top, right, bottom } = detect(canvas);
 | Name | Type | Default | Comment |
 | --- | --- | --- | --- |
 |canvas |`HTMLCanvasElement` |required |Tainted canvas element |
-|options |`Options` |(see below) |Tainted canvas element |
+|options |`Options` | |see below |
 
 ### `options`
 

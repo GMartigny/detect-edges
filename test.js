@@ -1,6 +1,8 @@
 import test from "ava";
-import { createCanvas } from "canvas";
-import detect from ".";
+import Canvas from "canvas";
+import detect from "./index.js";
+
+const { createCanvas } = Canvas;
 
 test("Main", (t) => {
     const canvas = createCanvas(100, 200);
