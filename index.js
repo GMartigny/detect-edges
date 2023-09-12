@@ -6,7 +6,7 @@
 const checkOpacityLevel = tolerance => (pixels) => {
     let transparent = true;
     for (let i = 3, l = pixels.length; i < l && transparent; i += 4) {
-        transparent = transparent && pixels[i] === 255 * tolerance;
+        transparent = transparent && pixels[i] <= 255 * tolerance;
     }
     return transparent;
 };
@@ -22,7 +22,7 @@ const defaultOptions = {
 /**
  * Smartly detect edges of an image
  * @param {HTMLCanvasElement} canvas - Tainted canvas element
- * @param {Options} options - Some options
+ * @param {Options} [options] - Some options
  * @returns {{top: number, left: number, bottom: number, right: number}}
  */
 export default (canvas, options) => {
@@ -41,11 +41,11 @@ export default (canvas, options) => {
     do {
         ++top;
         pixels = context.getImageData(0, top, width, 1).data;
-    } while (isTransparent(pixels));
 
-    if (top === height) {
-        throw new Error("Can't detect edges.");
-    }
+        if (top >= height) {
+            throw new Error("Can't detect edges.");
+        }
+    } while (isTransparent(pixels));
 
     // Left
     let left = -1;
